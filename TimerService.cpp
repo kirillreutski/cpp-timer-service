@@ -44,22 +44,5 @@ class TimerService {
         ArrayOfCallbacks callbacks[10];
 };
 
-// void callback(void) {
-//     printf("callback called!");
-// }
-
-// int main(){
-//     // printf("hi!\n");
-//     // TimerService timer;
-//     // char str[10];
-//     // sprintf(str, "%d", timer.value);
-//     // printf(str);
-//     int timerId = timer.initTimer(1000, callback);
-//     timer.runTimerImmediately(timerId);
-//     // TimerService timer;
-//     // std::cout << timer.value; 
-    
-//     return 0; 
-// }
 
 
