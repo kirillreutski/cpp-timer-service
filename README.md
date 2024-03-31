@@ -1,5 +1,5 @@
-# Easy lib to keep several actions to run by timings
-
+# cpp-timer-service
+Small library to keep several actions to run by timings for C/C++ microcontroller e.g. esp8266
 # Usage
 
 ```
