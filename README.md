@@ -26,6 +26,7 @@ TimerService timer;
 
 void setup(){    
     timer.setYield(yuildCallback);
+    timer.setLogger(loggerCallback);
     int timer1Id = timer.initTimer(1000, callback); // 1000 milliseconds period = 1 second
     int timer2Id = timer.initTimer(5 * 1000, callback2); // 5 * 1000 milliseconds period = 5 seconds
     timer.runTimerImmediately(timer1Id); // method to run timer immediately, e.g. on external event
