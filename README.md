@@ -3,17 +3,23 @@ Small library to keep several actions to run by timings for C/C++ microcontrolle
 # Usage
 
 ```
-// this callback will be run
+// this callback will be run each second
 void callback(void) {
     printf("callback called!");
+}
+
+// this callback will be run each 5 seconds
+void callback2(void) {
+    printf("callback2 called!");
 }
 
 TimerService timer;
 
 
 void setup(){    
-    int timerId = timer.initTimer(1000, callback); // 1000 milliseconds period = 1 second
-    timer.runTimerImmediately(timerId); // method to run timer immediately, e.g. on external event
+    int timer1Id = timer.initTimer(1000, callback); // 1000 milliseconds period = 1 second
+    int timer2Id = timer.initTimer(5 * 1000, callback2); // 5 * 1000 milliseconds period = 5 seconds
+    timer.runTimerImmediately(timer1Id); // method to run timer immediately, e.g. on external event
 }
 
 void loop(){
